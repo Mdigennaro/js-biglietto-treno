@@ -12,7 +12,26 @@ const age = prompt (`Inserisci età`);
 
 let price = distance * 0.21
 
+if(age < 18){
+  console.log(`100 * price / 20`)
+}
+
+let bigliettoValido = true;
+let errorNum = ""
+
 console.log(distance);
 console.log(age);
 console.log(price);
 
+if(isNaN(distance)){
+  bigliettoValido = false
+  errorNum = `Inserire una  distanza valida`
+}
+
+if(isNaN(age)){
+  bigliettoValido = false
+  errorNum = `Inserire un età valida`
+}
+
+console.log('bigliettoValido',bigliettoValido)
+console.log('errornNum',errorNum)
